@@ -1,0 +1,28 @@
+version: "1.0"
+
+design_life_years:
+  wood: 40
+  steel: 60
+  concrete: 60
+  composite: 60
+
+defect_weights:
+  none: 0.0
+  minor: 0.25
+  moderate: 0.50
+  major: 0.75
+  critical: 1.0
+
+max_attachments:
+  distribution: 10
+  transmission: 20
+
+weights:
+  age: 0.20
+  decay: 0.35
+  defect: 0.25
+  lean: 0.10
+  load: 0.10
+
+reinforcement:
+  credit: 0.15

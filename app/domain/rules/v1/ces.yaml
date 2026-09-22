@@ -1,0 +1,6 @@
+version: "1.0"
+
+weights:
+  population_exposure: 0.45
+  critical_infrastructure: 0.30
+  service_impact: 0.25

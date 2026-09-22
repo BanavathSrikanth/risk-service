@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+		"name": "InfraIQ .NET BFF Service API",
+		"description": "Postman Collection for testing the .NET 10 Backend-For-Frontend (BFF) endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/bff/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bff",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Calculate Risk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"asset_id\": \"POLE-88421\",\n  \"tenant_id\": \"PACIFIC-POWER\",\n  \"age_years\": 35.0,\n  \"material\": \"wood\",\n  \"remaining_fiber_pct\": 50.0,\n  \"defect_severity\": \"major\",\n  \"lean_deg\": 6.5,\n  \"attachment_count\": 4,\n  \"population_exposure\": 75.0,\n  \"failure_cost\": 450000.0,\n  \"wind_speed_mph\": 45.0,\n  \"temperature_f\": 95.0,\n  \"days_overdue\": 45\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/bff/api/v1/calculate-risk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bff",
+						"api",
+						"v1",
+						"calculate-risk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Evaluate Financials",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"asset_id\": \"POLE-88421\",\n  \"tenant_id\": \"PACIFIC-POWER\",\n  \"condition_band\": \"POOR\",\n  \"replacement_cost\": 125000.0,\n  \"customers\": 3500,\n  \"outage_hours\": 24.0,\n  \"outage_cost_per_customer_hour\": 15.0,\n  \"wildfire_liability_exposure\": 5000000.0,\n  \"hftd_tier\": \"Tier3\",\n  \"action_cost\": 35000.0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/bff/api/v1/evaluate-financials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bff",
+						"api",
+						"v1",
+						"evaluate-financials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Pole Priority",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"asset_id\": \"POLE-88421\",\n  \"tenant_id\": \"PACIFIC-POWER\",\n  \"composite_risk_score\": 82.5,\n  \"consequence_score\": 78.0,\n  \"hazard_exposure_score\": 85.0,\n  \"days_overdue\": 45,\n  \"inspection_confidence\": 0.9\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/bff/api/v1/pole-priority",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bff",
+						"api",
+						"v1",
+						"pole-priority"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Unified Asset Audit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"asset_id\": \"POLE-88421\",\n  \"tenant_id\": \"PACIFIC-POWER\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/bff/api/v1/asset-risk-summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bff",
+						"api",
+						"v1",
+						"asset-risk-summary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

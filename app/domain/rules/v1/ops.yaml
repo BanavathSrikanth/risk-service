@@ -1,0 +1,17 @@
+version: "1.1"
+
+weights:
+  asset_condition: 0.40
+  consequence: 0.25
+  cqs: 0.35
+
+dhm:
+  minimum: 1.0
+  maximum: 2.5
+
+lag:
+  maximum_adjustment: 15.0
+  days_per_step: 30.0
+  points_per_step: 5.0
+
+scheduled_work_adjustment: -10.0

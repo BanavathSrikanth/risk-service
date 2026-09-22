@@ -1,0 +1,22 @@
+version: "1.0"
+
+thresholds:
+  wind_speed_mph:
+    low: 15
+    moderate: 25
+    high: 35
+
+  temperature_f:
+    moderate: 90
+    high: 100
+
+  relative_humidity_pct:
+    low: 30
+    high: 15
+
+weights:
+  wind: 0.40
+  temperature: 0.15
+  humidity: 0.20
+  precipitation: 0.10
+  fire_weather: 0.15

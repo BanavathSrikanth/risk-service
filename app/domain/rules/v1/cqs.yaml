@@ -1,0 +1,11 @@
+version: "1.0"
+
+normalization:
+  failure_cost_max: 1000000
+  outage_duration_max_hours: 72
+  customer_count_max: 10000
+
+weights:
+  failure_cost: 0.40
+  outage_duration: 0.25
+  customer_count: 0.35

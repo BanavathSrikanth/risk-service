@@ -1,0 +1,11 @@
+version: "1.0"
+
+normalization:
+  evidence_count_max: 10
+
+weights:
+  asset_condition: 0.30
+  consequence: 0.20
+  exposure: 0.20
+  severity: 0.25
+  evidence: 0.05

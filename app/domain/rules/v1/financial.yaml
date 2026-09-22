@@ -1,0 +1,52 @@
+calculation_version: financial-engine-v2
+currency: USD
+
+# SME-editable, versioned financial assumptions. These are illustrative PoC values.
+failure_probability:
+  excellent: 0.001
+  good: 0.002
+  fair: 0.005
+  poor: 0.010
+  critical: 0.020
+
+hftd_ignition_probability:
+  tier3: 0.050
+  tier2: 0.020
+  tier1: 0.002
+  none: 0.002
+
+scenario_multipliers:
+  low: 0.80
+  base: 1.00
+  high: 1.20
+
+default_assumptions:
+  emergency_replacement_cost:
+    low: 15000
+    base: 25000
+    high: 35000
+  action_cost:
+    low: 15000
+    base: 25000
+    high: 35000
+  customers_affected:
+    low: 100
+    base: 200
+    high: 300
+  outage_duration_hours:
+    low: 2
+    base: 4
+    high: 8
+  outage_cost_per_customer_hour:
+    low: 5
+    base: 10
+    high: 20
+  discount_rate: 0.05
+  degradation_rate: 0.02
+  design_life_years: 50
+  remaining_life_years: 20
+  horizon_years: 10
+  wildfire_liability_exposure:
+    low: 500000000
+    base: 1000000000
+    high: 2000000000

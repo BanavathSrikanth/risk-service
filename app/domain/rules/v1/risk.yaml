@@ -1,0 +1,31 @@
+version: "1.1"
+
+weights:
+  ahs: 0.20
+  ces: 0.15
+  cqs: 0.15
+  dhm: 0.20
+  ops: 0.15
+  ves: 0.15
+
+classification:
+  categories:
+    - name: LOW
+      min_score: 0
+      max_score: 20
+
+    - name: MODERATE
+      min_score: 20
+      max_score: 40
+
+    - name: HIGH
+      min_score: 40
+      max_score: 60
+
+    - name: VERY_HIGH
+      min_score: 60
+      max_score: 80
+
+    - name: CRITICAL
+      min_score: 80
+      max_score: 100
